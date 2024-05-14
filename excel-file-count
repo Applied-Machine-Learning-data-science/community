@@ -1,0 +1,20 @@
+import os
+
+# Centre for Applied Machine Learning and DataScience, Jahi Abuja
+
+def count_excel_files(folder_path):
+    # Initialize a counter
+    excel_file_count = 0
+
+    # Loop through all files in the folder
+    for file_name in os.listdir(folder_path):
+        if file_name.endswith('.xlsx') or file_name.endswith('.xls'):
+            excel_file_count += 1
+
+    return excel_file_count
+
+# Example usage
+folder_path = 'path_to_your_excel_files_folder'
+excel_file_count = count_excel_files(folder_path)
+
+print(f'There are {excel_file_count} Excel files in the folder.')
